@@ -2,26 +2,21 @@
 	App.populator('home', function (page) {
 		API.medalData(function (response) {
 			var res = JSON.parse(response);
-			var sorted = [];
+			updateData(res, page);
+		});
 
-			for (var key in res) {
-				sorted.push({key:key, rank: res[key].rank});
-			}
-			sorted.sort(function(x,y) {return x.rank - y.rank });
+		$(page).find('#refresh').on('click', function (e) {
+			e.preventDefault();
+			$(page).find('#loader').show();
 
+			API.medalData(function (response) {
+				var res = JSON.parse(response);
+				$(page).find('#medal-list').empty();
+				updateData(res, page);
+				$(page).find('#loader').hide();
+			});
 
-			for (var i = 0; i < sorted.length; i++) {
-				var item = res[sorted[i].key];
-				if (item.rank !== 0) {
-					$(page).find("#medal-list").append("<tr><td class='rank'>"
-						+item.rank+". </td><td>"
-						+item.country_name+"</td><td class='medal'>"
-						+item.gold_count+"</td><td class='medal'>"
-						+item.silver_count+"</td><td class='medal'>"
-						+item.bronze_count+"</td><td class='medal'>"
-						+item.medal_count+"</td></tr>");
-				}
-			}
+			return false;
 		});
 	});
 
@@ -31,3 +26,26 @@
 		App.load('home');
 	}
 })(App);
+
+function updateData (json, page) {
+	var sorted = [];
+
+	for (var key in json) {
+		sorted.push({key:key, rank: json[key].rank});
+	}
+
+	sorted.sort(function(x,y) {return x.rank - y.rank });
+
+	for (var i = 0; i < sorted.length; i++) {
+		var item = json[sorted[i].key];
+		if (item.rank !== 0) {
+			$(page).find("#medal-list").append("<tr><td class='rank'>"
+				+item.rank+". </td><td>"
+				+item.country_name+"</td><td class='medal'>"
+				+item.gold_count+"</td><td class='medal'>"
+				+item.silver_count+"</td><td class='medal'>"
+				+item.bronze_count+"</td><td class='medal'>"
+				+item.medal_count+"</td></tr>");
+		}
+	}
+}

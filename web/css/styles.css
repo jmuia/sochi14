@@ -62,3 +62,20 @@ th.total {
 th {
 	text-align: left;
 }
+
+.refresh {
+	background-image: url('/img/loop.png?inline=1');
+	height: 16px;
+	width: 16px;
+	margin-top: 14px;
+}
+
+#loader {
+	display: none;
+	text-align: center;
+	background-color: #19A3FF;
+	color: #FFF;
+	height: 43px;
+	line-height: 43px;
+	border-bottom: 1px solid #AAA;
+}
