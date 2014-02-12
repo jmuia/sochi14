@@ -2,14 +2,14 @@
 <html manifest="cache.manifest">
 	<head>
 		<!-- Card info -->
-		<title>Starter Kit</title>
-		<meta name="description" content="My amazing card!">
+		<title>Sochi 14 Medal Standings</title>
+		<meta name="description" content="Quickly check the medal standings for the Sochi 2014 Olympic Games!">
 		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 		<meta name="kik-prefer" content="true">
 		<link rel="kik-icon" href="/img/icon.png">
 
 		<!-- Styles -->
-		<link rel="stylesheet" href="http://cdn.kik.com/app/1.10.0/default.css">
+		<link rel="stylesheet" href="http://cdn.kik.com/app/2-DEV/app.min.css">
 		<link rel="stylesheet" href="/css/styles.css">
 	</head>
 
@@ -18,30 +18,30 @@
 
 		<div class="app-page" data-page="home">
 			<div class="app-topbar">
-				<div class="app-title">Home page</div>
+				<div class="app-title">Sochi 14 Medal Standings</div>
 			</div>
 			<div class="app-content">
-				<div class="app-section">
-					<div class="app-button" data-target="page2">Go to Page 2</div>
-				</div>
-			</div>
-		</div>
-
-		<div class="app-page" data-page="page2">
-			<div class="app-topbar">
-				<div class="app-button left" data-back="true">Back</div>
-				<div class="app-title">Page 2</div>
-			</div>
-			<div class="app-content">
-				Page 2 is lonely
+				<table>
+					<thead>
+						<tr>
+							<th class="rank"></th>
+							<th>Country</th>
+							<th class="medal"><div class="circle gold"></div></th>
+							<th class="medal"><div class="circle silver"></div></th>
+							<th class="medal"><div class="circle bronze"></div></th>
+							<th class="total">Total</th>
+						</tr>
+					</thead>
+					<tbody id="medal-list"></tbody>
+				</table>
 			</div>
 		</div>
 
 		<!-- Scripts -->
 		<script src="/zerver/API.js"></script>
 		<script src="http://zeptojs.com/zepto.min.js"></script>
-		<script src="http://cdn.kik.com/cards/0.11.3/cards.js"></script>
-		<script src="http://cdn.kik.com/app/1.10.0/app.js"></script>
+		<script src="http://cdn.kik.com/kik/1.0.0/kik.js"></script>
+		<script src="http://cdn.kik.com/app/2-DEV/app.min.js"></script>
 		<script src="/js/main.js"></script>
 	</body>
 </html>

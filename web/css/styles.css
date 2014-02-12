@@ -1,1 +1,64 @@
-/* put stuff here */
+.circle {
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.gold {
+	background-color: #ffd700;
+}
+
+.silver {
+	background-color: #C0C0C0;
+}
+
+.bronze {
+	background-color: #CD7F32;
+}
+
+table {
+	width: 100%;
+	border-collapse: collapse;
+	background-color: #FFF;
+	padding-left: 10px;
+	padding-right: 10px;
+	table-layout: fixed;
+}
+
+tr {
+	color: #444;
+	height: 43px;
+	line-height: 43px;
+	border-bottom: 1px solid #AAA;
+}
+
+td {
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+.medal {
+	text-align: center;
+	width: 30px;
+}
+
+td.rank {
+	text-align: right;
+	padding-right: 5px;
+}
+
+th.rank {
+	width: 30px;
+}
+
+th.total {
+	width: 50px;
+	text-align: center;
+}
+
+th {
+	text-align: left;
+}
