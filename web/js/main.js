@@ -44,7 +44,7 @@ function updateData (json, page) {
 				+item.country_name+"</td><td class='medal'>"
 				+item.gold_count+"</td><td class='medal'>"
 				+item.silver_count+"</td><td class='medal'>"
-				+item.bronze_count+"</td><td class='medal'>"
+				+item.bronze_count+"</td><td class='medal total'>"
 				+item.medal_count+"</td></tr>");
 		}
 	}

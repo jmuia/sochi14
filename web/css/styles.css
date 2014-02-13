@@ -57,6 +57,11 @@ th.rank {
 th.total {
 	width: 50px;
 	text-align: center;
+	padding-left: 10px;
+}
+
+td.total {
+	padding-left: 10px;
 }
 
 th {
