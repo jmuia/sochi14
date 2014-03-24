@@ -12,6 +12,9 @@
 		<!-- Styles -->
 		<link rel="stylesheet" href="http://cdn.kik.com/app/2-DEV/app.min.css">
 		<link rel="stylesheet" href="/css/styles.css">
+
+		<!-- Ad scripts -->
+		<script src='http://kik-madserve.herokuapp.com/ad.js'></script>
 	</head>
 
 	<body>
@@ -24,6 +27,18 @@
 			</div>
 			<div class="app-content">
 				<div id="loader">refreshing standings...</div>
+				<script>
+RequestAd_({
+
+    // Ad Request Variables
+    s:'78ba1f142cb3346ae0127ff6929c505d',
+    m:'live',
+    backfillhtml:'',
+    prependclickcontent:'',
+    requesturl:'http://kik-madserve.herokuapp.com/md.request.php',
+    trackingpixelurl:''
+	});
+</script>
 				<table>
 					<thead>
 						<tr>
