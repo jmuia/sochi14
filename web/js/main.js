@@ -18,6 +18,17 @@
 
 			return false;
 		});
+
+
+		RequestAd_({
+		    // Ad Request Variables
+		    s:'5ec821e561be9caeb9eb4d39e3b08f86',
+		    m:'live',
+		    backfillhtml:'',
+		    prependclickcontent:'',
+		    requesturl:'http://kik-madserve.herokuapp.com/md.request.php',
+		    trackingpixelurl:''
+		}, page.querySelector("#banner-container"));
 	});
 
 	try {
