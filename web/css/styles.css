@@ -84,3 +84,12 @@ th {
 	line-height: 43px;
 	border-bottom: 1px solid #AAA;
 }
+
+#banner-container {
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	height: 50px;
+	text-align: center;
+	z-index: 2000;
+}
